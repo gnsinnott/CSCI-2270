@@ -2,27 +2,19 @@
 
 using namespace std;
 
-void addfour(int array[], int cap, int &c){
-    for (int i = 0; i < cap; i ++){
-        array[i] = array[i] +4;
-    }
-    c++;
-}
+struct student{
+    string name;
+    string email;
+    string birthday;
+};
 
 int main() {
-    // int array[4];
-    int c = 5;
-    int *array = new int[4];
-    for (int i = 0; i < 4; i++){
-        array[i] = 1;
-    }
-    for (int i = 0; i < 4; i++){
-        cout << array[i] << endl;
-    }
-    cout << c << endl;
-    addfour(array, 4, c);
-    cout << c << endl;
-    for (int i = 0; i < 4; i++){
-        cout << array[i] << endl;
-    }
+    student s;
+    s.name = 'Iam Astudent';
+    s.email = "generic@email.com";
+    s.birthday = '2 February 2002';
+    student *myStudent = &s;
+    cout << s.email << endl;
+    cout << myStudent->email << endl;
+    cout << (&s)->email << endl;
 }
