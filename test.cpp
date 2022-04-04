@@ -2,19 +2,12 @@
 
 using namespace std;
 
-struct student{
-    string name;
-    string email;
-    string birthday;
-};
-
+int repeat(int n){
+    if(n==1){
+        return 2;
+    }
+    return((n-1)*repeat(n-1));
+}
 int main() {
-    student s;
-    s.name = 'Iam Astudent';
-    s.email = "generic@email.com";
-    s.birthday = '2 February 2002';
-    student *myStudent = &s;
-    cout << s.email << endl;
-    cout << myStudent->email << endl;
-    cout << (&s)->email << endl;
+    cout << repeat(5);
 }

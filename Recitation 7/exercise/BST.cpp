@@ -52,6 +52,7 @@ void BST:: destroyNode(Node *currNode){
     if(currNode == NULL){
         return;
     }
+    cout  << currNode->key << " is being deleted" << endl;
     destroyNode(currNode->left);
     destroyNode(currNode->right);
     delete currNode;
